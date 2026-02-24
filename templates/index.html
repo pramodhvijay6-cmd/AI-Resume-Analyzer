@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>🚀 AI Resume Analyzer</h1>
+        <p>Upload your resume & compare with job description instantly</p>
+
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+
+            <div class="upload-section">
+                <label>Upload Resume (PDF or TXT)</label>
+                <input type="file" name="resume_file" required>
+            </div>
+
+            <div class="input-section">
+                <label>Paste Job Description</label>
+                <textarea name="job_description" required></textarea>
+            </div>
+
+            <button type="submit" class="analyze-btn">Analyze Match</button>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
